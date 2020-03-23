@@ -31,7 +31,7 @@ export default class View {
             if(target.classList.contains('modal-control-right') || target.classList.contains('modal-control-left'))
                 return;
             if(target.nodeName !== 'IMG')
-            this.$modal.classList.remove('active');
+                this.$modal.classList.remove('active');
         });
     }
 
@@ -44,8 +44,8 @@ export default class View {
         * @param {Event} event 
         */
         this.$body.addEventListener('keydown',(event)=>{
-            if(event.keyCode === 27);
-                this.$modal.classList.remove('active');
+             if(event.keyCode === 27)
+                 this.$modal.classList.remove('active');            
         });
     }
     /**
@@ -79,7 +79,7 @@ export default class View {
         });
       }
 
-      bindControlsForItem = (handler)=>{
+      bindMouseControlsForItem = (handler)=>{
         /**
         * Click Handlers for Modal / Photo pagination.
         * @param {EventTarget} target photo item
@@ -88,6 +88,19 @@ export default class View {
                 handler("next");
         });
         this.$leftControl.addEventListener('click',({target})=>{
+                handler("prev");
+        });
+      }
+
+      bindKeyboardControlsForItem = (handler)=>{
+        /**
+        * Keyup Handlers for Modal / Photo pagination.
+        * @param {EventTarget} event photo item
+        */
+       this.$body.addEventListener('keyup',(event)=>{
+            if(event.keyCode === 39)
+                handler("next");
+            if(event.keyCode === 37)
                 handler("prev");
         });
       }

@@ -10,7 +10,8 @@ export default class Controller {
         this.store = store;
         this.view = view;
         view.bindAddModalForItem(this.updateCurrentIndex.bind(this));
-        view.bindControlsForItem(this.updateCurrentIndex.bind(this));
+        view.bindMouseControlsForItem(this.updateCurrentIndex.bind(this));
+        view.bindKeyboardControlsForItem(this.updateCurrentIndex.bind(this));
         this.showItems();
       }
 
@@ -19,9 +20,8 @@ export default class Controller {
       showItems = ()=>{
         this.store.find({}, items => this.view.showItems(items));
       }
-
+      /* Updates the index of the current photo to the store */
       updateCurrentIndex = (id)=>{
-          console.log(id);
           this.store.updateCurrentIndex(id, (item,index,total) => this.view.updateCurrentPhoto(item,index,total));
       }
 }

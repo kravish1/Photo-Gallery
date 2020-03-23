@@ -9,6 +9,7 @@ App Features
     - When the user clicks on an image, it will show the entire image fullscreen as a Modal
     - The Modal has the following items
         - Pagination controls, Previous (<) / Next (>) to navigate back and forth between the images
+        - The pagination is accessible both using mouse clicks and keyboard arrow <- -> keys
         - Label showing the current photo number and the total photo count eg."Showing 2 of 30"
         - A "close" button to close the Modal and return to the grid view
     - The Modal can be closed using the following ways

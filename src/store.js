@@ -16,6 +16,12 @@ export default class Store {
 		callback(photos);
     }
 
+    /**
+	 * Updates the index of the current photo.
+	 *
+	 * @param {Id}  Id of the selected Photo 
+	 * @param {function(ItemList)} callback Called with the current photo object
+    */
     updateCurrentIndex = (id,callback)=>{
         if(id !== 'prev' && id !== 'next'){
             id = id.slice(0,-1);
