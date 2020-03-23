@@ -10,12 +10,18 @@ export default class Store {
 	 *
 	 * @param {ItemQuery} query Query to match
 	 * @param {function(ItemList)} callback Called when the query is done
-	 */
+    */
     find = (query, callback)=>{
 		const photos = this.photos;
 		callback(photos);
     }
 
+    /**
+	 * Updates the index of the current photo.
+	 *
+	 * @param {Id}  Id of the selected Photo 
+	 * @param {function(ItemList)} callback Called with the current photo object
+    */
     updateCurrentIndex = (id,callback)=>{
         if(id !== 'prev' && id !== 'next'){
             id = id.slice(0,-1);
