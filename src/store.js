@@ -10,7 +10,7 @@ export default class Store {
 	 *
 	 * @param {ItemQuery} query Query to match
 	 * @param {function(ItemList)} callback Called when the query is done
-	 */
+    */
     find = (query, callback)=>{
 		const photos = this.photos;
 		callback(photos);

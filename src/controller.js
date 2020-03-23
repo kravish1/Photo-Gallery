@@ -20,6 +20,10 @@ export default class Controller {
       showItems = ()=>{
         this.store.find({}, items => this.view.showItems(items));
       }
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 056d8181fe02e766b9870974f8c3967b36915581
       /* Updates the index of the current photo to the store */
       updateCurrentIndex = (id)=>{
           this.store.updateCurrentIndex(id, (item,index,total) => this.view.updateCurrentPhoto(item,index,total));
