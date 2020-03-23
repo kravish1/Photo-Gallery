@@ -1,0 +1,222 @@
+/* Generic Styles */
+* {
+    margin : 0;
+    padding : 0;
+    font-family :sans-serif;
+    outline : none;
+}
+
+html {
+    font-size : 62.5%;
+}
+
+/* App Style*/
+.main-page {
+    width : 100%;
+    height : 100vh;
+    display : flex;
+    flex-direction : column;
+}
+.header{
+    font-size : 3.5rem;
+    padding : 3rem 2rem;
+}
+
+.gallery {
+    display : flex;
+    flex-wrap : wrap;
+    justify-content : center;
+    align-items : center;
+}
+
+.photo {
+    width :30.5rem;
+    height : 30.5rem;
+    margin : .6rem;
+    cursor : pointer;
+}
+.photo img {
+    width : 100%;
+    height : 100%;
+    border-radius : .5rem;
+}
+
+.modal-wrapper  {
+    position : fixed;
+    display : none;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height : 100%;
+    background-color :rgba(0,0,0,0.5);
+    overflow-y : scroll;
+}
+.modal-body {
+    position : absolute;
+    left : 22.5%;
+    top : 4%;
+    
+}
+.img-container {
+    width : 70rem;
+    height : 58rem;
+}
+.img-container img {
+    width : 100%;
+    height : 100%;
+    border-radius : .5rem;
+}
+.close {
+    position : absolute;
+    top : 3rem;
+    right : 15rem;
+    padding: 0;
+    border: none;
+    background: none;
+    color : #eee;
+    cursor : pointer;
+    z-index : 100;
+}
+.active {
+    display : block;
+}
+
+.modal-control-left {
+    position : absolute;
+    top : 30rem;
+    left : 15rem;
+    color : #eee;
+    cursor : pointer;
+    z-index : 110;
+    font-size : 3rem;
+}
+
+.modal-control-right {
+    position : absolute;
+    top : 30rem;
+    right : 15rem;
+    color : #eee;
+    cursor : pointer;
+    z-index : 110;
+    font-size : 3rem;
+}
+
+.photo-count {
+    position : absolute;
+    top : 62rem;
+    right : 48%;
+    color : #eee;
+    z-index : 110;
+    font-size : 1.6rem;
+}
+
+/* Media Queries to support different viewports such as phone/tablet and notebook/desktop viewports */
+
+/* iPAD Pro */
+@media (max-width : 1024px) {
+    .modal-body {
+        top : 10%;
+        left : 15%;
+    }
+    .close {
+        top : 13.5rem;
+        right : 10rem;
+    }
+    .modal-control-left {
+        top : 35rem;
+        left : 12rem;
+    }
+    .modal-control-right {
+        top : 35rem;
+        right : 14rem;
+    }
+    
+    .photo-count {
+        top : 73rem;
+        right : 40%;
+        font-size : 3rem;
+    }
+}
+/* iPAD */
+@media (max-width : 768px) {
+    .modal-body {
+        top : 10%;
+        left : 23%;
+    }
+    .img-container {
+        width : 40rem;
+        height : 40rem;
+        margin-top : 5rem;
+    }
+    .close {
+        top : 15rem;
+        right : 10rem;
+    }
+    .modal-control-left {
+        top : 30rem;
+        left : 12rem;
+    }
+    .modal-control-right {
+        top : 30rem;
+        right : 14rem;
+    }
+    
+    .photo-count {
+        top : 57rem;
+        right : 38%;
+        font-size : 2rem;
+    }
+}
+/* iPHONE 6/7/8 Plus */
+@media (max-width : 414px) { 
+   
+    .img-container {
+        width : 25rem;
+        height : 25rem;
+        margin-top : 5rem;
+    }
+    .modal-body {
+        top : 10%;
+        left : 22%;
+    }
+    .close {
+        top : 12.5rem;
+        right : 2rem;
+    }
+    .modal-control-left {
+        top : 22rem;
+        left : 6rem;
+    }
+    .modal-control-right {
+        top : 22rem;
+        right : 4rem;
+    }
+    
+    .photo-count {
+        top : 38rem;
+        right : 30%;
+    }
+   
+   }
+/* iPHONE X */
+@media (max-width : 375px) {
+    .modal-body {
+        top : 10%;
+        left : 18%;
+    }
+    .close {
+        top : 13rem;
+        right : 2rem;
+    }
+    .modal-control-left {
+        left : 4rem;
+    }
+    .modal-control-right {
+        right : 3rem;
+    }
+    
+    .photo-count {
+        top : 38.5rem;
+        right : 28%;
+    }
+}
